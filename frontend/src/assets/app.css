@@ -1,0 +1,141 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Heading Styles */
+h1 {
+  color: #1f2937; /* Tailwind's text-gray-800 */
+  font-weight: 600;
+  font-size: 2rem; /* text-3xl */
+}
+
+/* Loading and Error States */
+.text-center {
+  text-align: center;
+}
+
+.text-gray-500 {
+  color: #6b7280; /* Tailwind's text-gray-500 */
+}
+
+.text-red-500 {
+  color: #ef4444; /* Tailwind's text-red-500 */
+}
+
+/* Main Content */
+.main-content {
+  padding: 1rem; /* For small screens */
+}
+
+@media (min-width: 640px) {
+  .main-content {
+    padding: 2rem; /* For medium screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding: 4rem; /* For large screens */
+  }
+}
+
+/* Product List Section */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-item {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-item h3 {
+  font-size: 1.25rem; /* text-xl */
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.product-item p {
+  color: #6b7280;
+  font-size: 1rem; /* text-base */
+  margin-bottom: 1rem;
+}
+
+.product-item .price {
+  color: #10b981; /* Tailwind's text-green-500 */
+  font-weight: bold;
+}
+
+/* Responsive design for the Product List */
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: 1fr; /* Stacks product items in one column */
+  }
+}
+
+
+/* app.css */
+@media (max-width: 768px) {
+  /* Ensure text doesn't overflow */
+  .text-xl {
+    font-size: 1.25rem; /* Adjust for mobile */
+  }
+
+  .space-y-4 {
+    margin-bottom: 16px;
+  }
+
+  /* Adjust grid for smaller screens */
+  .sm\:grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Ensure padding looks good on tablet */
+  .sm\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* Responsive grid */
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Larger screens */
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* Custom styles for your components */
+@media (max-width: 640px) {
+  .product-list {
+    grid-template-columns: repeat(1, 1fr); /* Mobile: 1 column */
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columns */
+  }
+}
+
+@media (min-width: 1025px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columns */
+  }
+}
